@@ -17,11 +17,8 @@ defmodule KomaTest do
   # .reduce
   test ".reduce/2 returns element for singleton" do
     assert Koma.reduce([7], fn (elem, acc) -> elem + acc end) == 7
-    assert Enum.reduce([7], fn (elem, acc) -> elem + acc end) == 7
     assert Koma.reduce([7], fn (elem, acc) -> elem * acc end) == 7
-    assert Enum.reduce([7], fn (elem, acc) -> elem * acc end) == 7
     assert Koma.reduce([7], fn (elem, acc) -> elem / acc end) == 7
-    assert Enum.reduce([7], fn (elem, acc) -> elem / acc end) == 7
   end
 
   test ".reduce/3 returns accumulator for []" do
